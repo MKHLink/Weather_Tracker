@@ -96,7 +96,7 @@ function getCity4(){
 //api call to get today's weather
 function getWeather(cityName)
 {
-    var apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&units=imperial&APPID=2d2437f845de1bc0a6790ddf29c83740";
+    var apiURL = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&units=imperial&APPID=2d2437f845de1bc0a6790ddf29c83740";
     fetch(apiURL).then(function(response){
         response.json().then(function(data){
 
@@ -108,7 +108,7 @@ function getWeather(cityName)
 //api call to get forecast
 function getForecast(cityName)
 {
-    var apiURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&APPID=2d2437f845de1bc0a6790ddf29c83740";
+    var apiURL = "http://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&APPID=2d2437f845de1bc0a6790ddf29c83740";
     fetch(apiURL).then(function(response){
         response.json().then(function(data){
             displayForecastData(data);
