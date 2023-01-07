@@ -2,9 +2,17 @@ var weatherContainerEl = document.querySelector("#weather-container");
 var displayWeatherEl = document.querySelector("#weather-display");
 var forecastContainerEl = document.querySelector("#forecast-container");
 var displayForecastEl=document.querySelector("#weather-forecast");
+var userBtn = document.getElementById("userBtn");
 
-getWeather("New York");
-getForecast("New York");
+userBtn.addEventListener("click",getCity);
+
+function getCity(){
+    cityName = document.getElementById("userInput").value;
+    console.log(cityName);
+    getWeather(cityName);
+    getForecast(cityName); 
+}
+
 
 function getWeather(cityName)
 {
